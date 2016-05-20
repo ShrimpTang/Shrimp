@@ -1,0 +1,12 @@
+<md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+    <ul class="tag-sidebar">
+        <li ng-repeat="(name,count) in postCtrl.tags">
+            <md-button >
+                <span>{{name}}({{count}})</span>
+            </md-button>
+        </li>
+    </ul>
+</md-sidenav>
+<div layout="column"   flex class="layout-column flex">
+
+</div>

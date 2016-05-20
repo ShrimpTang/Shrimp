@@ -17,23 +17,26 @@ module.exports = {
             $: 'jquery',
             jQuery: 'jquery',
             'window.jQuery': 'jquery',
-            angular:'angular'
+            _:'lodash'
         })
     ],
     module: {
-        loaders: [{
-            test: /\.js/,
-            exclude: /node_modules/,
-            loader: 'babel'
-        }, {
-            test: /\.css$/,
-            loader: 'style-loader!css-loader',
-            exclude: /node_modules/
-        }, {
-            test: /\.less$/,
-            loader: 'style-loader!css-loader!autoprefixer-loader!less-loader',
-            exclude: /node_modules/
-        },
-            {loader: 'exports?window.angular', test: require.resolve('angular')}]
+        loaders: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: 'babel'
+            },
+            {
+                test: /\.css$/,
+                loader: 'style!css!'
+            },
+            {
+                test: /\.less$/,
+                loader: 'style-loader!css-loader!autoprefixer-loader!less-loader',
+                exclude: /node_modules/
+            },
+            {test: /\.html$/, loader: 'raw', exclude: /node_modules/},
+        ]
     }
 }

@@ -4,12 +4,28 @@
     <meta charset="UTF-8">
     <title>Shrimp</title>
 </head>
-<body ng-controller="test">
-<div masonry>
-    <div class="masonry-brick" ng-repeat="brick in j">
-        <img ng-src="{{ j.preview_url }}" alt="A masonry brick">
-    </div>
+<body layout="column" ng-controller="test" ng-cloak>
+<md-toolbar layout="row" md-whiteframe="4">
+
+    <div flex></div>
+
+    <md-button ui-sref="post">post</md-button>
+    <md-button>Courses</md-button>
+    <md-button>Login</md-button>
+
+</md-toolbar>
+
+
+<div flex layout="row"  ui-view>
+
 </div>
+
+<!--<div>-->
+<!--<div ng-repeat="brick in j">-->
+<!--<img ng-src="{{ brick.preview_url }}">-->
+<!--</div>-->
+<!--</div>-->
+
 <script src="/public/assets/bundle.js"></script>
 </body>
 </html>
