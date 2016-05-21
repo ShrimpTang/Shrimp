@@ -1,4 +1,4 @@
-<md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+<md-sidenav class="md-sidenav-left md-whiteframe-z2 post-tag" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
     <ul class="tag-sidebar">
         <li ng-repeat="(name,count) in postCtrl.tags">
             <md-button >
@@ -7,6 +7,21 @@
         </li>
     </ul>
 </md-sidenav>
-<div layout="column"   flex class="layout-column flex">
+<!--<div layout="column"   flex class="layout-column flex">-->
+    <!--<img ng-repeat="post in postCtrl.posts" width="{{post.preview_width}}" height="preview_height" ng-src="{{post.preview_url}}">-->
+<!--</div>-->
+<!--<div flex class="post-container" >-->
+        <!--<md-card class="test" ng-repeat="post in postCtrl.posts">-->
+            <!--<img ng-src="{{post.preview_url}}" class="md-card-image" alt="Washed Out">-->
+            <!--<md-card-actions layout="row" layout-align="end center" class="layout-align-end-center layout-row">-->
+                <!--<button class="md-button md-ink-ripple" type="button" ng-transclude="" aria-label="Action 1"><span class="ng-scope">Action 1</span><div class="md-ripple-container"></div></button>-->
+                <!--<button class="md-button md-ink-ripple" type="button" ng-transclude="" aria-label="Action 2"><span class="ng-scope">Action 2</span><div class="md-ripple-container"></div></button>-->
+            <!--</md-card-actions>-->
+        <!--</md-card>-->
 
+<!--</div>-->
+<div class="post-container">
+    <div class="post" ng-repeat="post in postCtrl.posts">
+        <img class="post-img" ng-src="{{post.preview_url}}" >
+    </div>
 </div>

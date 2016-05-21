@@ -6,10 +6,11 @@ angular.module(MODULE_NAME, [])
             url: '/post',
             template: require('./post.html'),
             controller: function (postModal) {
-                var vm = this;
+                var vm = this
                 postModal.getPost({})
                     .then(function (data) {
                         vm.tags = _.countBy(_.map(data, d=>d.tags).join(' ').split(' '), t=>t);
+                        vm.posts = data;
                     })
             },
             controllerAs:'postCtrl'
